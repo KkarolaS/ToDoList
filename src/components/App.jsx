@@ -16,6 +16,15 @@ function App() {
     setItem("");
   };
 
+  const deleteItem = (id) => {
+    console.log(id);
+    setItemsList((prevValue) => {
+      return prevValue.filter((item, index) => {
+        return index !== id;
+      });
+    });
+  };
+
   return (
     <div className="container">
       <div className="heading">
@@ -29,8 +38,13 @@ function App() {
       </div>
       <div>
         <ul>
-          {itemsList.map((item) => (
-            <ToDoItem name={item} key={item} />
+          {itemsList.map((item, index) => (
+            <ToDoItem
+              name={item}
+              key={index}
+              id={index}
+              onChecked={deleteItem}
+            />
           ))}
         </ul>
       </div>
@@ -39,3 +53,5 @@ function App() {
 }
 
 export default App;
+
+//uuid zamiast index w key
