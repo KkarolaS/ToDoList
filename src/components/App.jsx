@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ToDoItem from "./ToDoItem";
 
 function App() {
   const [itemsList, setItemsList] = useState([]);
@@ -29,7 +30,7 @@ function App() {
       <div>
         <ul>
           {itemsList.map((item) => (
-            <li key={item}>{item}</li>
+            <ToDoItem name={item} key={item} />
           ))}
         </ul>
       </div>
