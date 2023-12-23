@@ -10,11 +10,15 @@ const ToDoItem = ({ name, onChecked, id }) => {
   };
 
   return (
-    <div onClick={toggleThroughName}>
-      <li style={isClicked ? { textDecoration: "line-through" } : null}>
+    <div className="item-wrapper" onClick={toggleThroughName}>
+      <li
+        className="list-item"
+        style={isClicked ? { textDecoration: "line-through" } : null}
+      >
         {name}
       </li>
       <button
+        className="btn btn-delete"
         onClick={() => {
           onChecked(id);
         }}

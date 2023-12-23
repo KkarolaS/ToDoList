@@ -1,5 +1,5 @@
 body {
-  background-color: #ffeaa7;
+  background-color: #5f8670;
   min-height: 70vh;
   padding: 1rem;
   box-sizing: border-box;
@@ -13,11 +13,8 @@ body {
 }
 
 .container {
-  width: 100%;
-  height: auto;
-  min-height: 500px;
-  max-width: 500px;
-  min-width: 250px;
+  width: 350px;
+  min-height: 600px;
   background: #f1f5f8;
   background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
   background-size: 25px 25px;
@@ -36,8 +33,9 @@ body {
   transform: rotate(2deg);
   padding: 0.2rem 1.2rem;
   border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
-  background-color: #fdcb6e;
+  background-color: #b80000;
   font-size: 1.5rem;
+  color: #ff9800;
 }
 
 .form input {
@@ -47,7 +45,7 @@ body {
   border-bottom-right-radius: 15px 3px;
   border-bottom-left-radius: 3px 15px;
   border: solid 3px transparent;
-  border-bottom: dashed 3px #fdcb6e;
+  border-bottom: dashed 3px #ff9800;
   font-family: "Architects Daughter", cursive;
   font-size: 1rem;
   color: hsla(260, 2%, 25%, 0.7);
@@ -55,16 +53,17 @@ body {
   margin-bottom: 20px;
 }
 
-button {
+.btn {
   padding: 0;
   border: none;
   font-family: "Architects Daughter", cursive;
   text-decoration: none;
   padding-bottom: 3px;
   border-radius: 5px;
-  background-color: #ffeaa7;
+  background-color: #ff9800;
 }
-button span {
+
+.btn span {
   background: #f1f5f8;
   display: block;
   padding: 0.5rem 1rem;
@@ -72,8 +71,23 @@ button span {
   border: 2px solid hsl(198, 1%, 29%);
 }
 
-li {
+.item-wrapper {
+  width: 100%;
+  min-height: 30px;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.list-item {
+  width: 70%;
   text-align: left;
   position: relative;
   padding: 0.5rem;
+  word-break: break-all;
+}
+.btn-delete {
+  width: 100px;
+  height: 30px;
+  justify-self: flex-end;
+  color: white;
 }
