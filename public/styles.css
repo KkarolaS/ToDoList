@@ -76,6 +76,7 @@ body {
   min-height: 30px;
   display: flex;
   margin-bottom: 15px;
+  align-items: baseline;
 }
 
 .list-item {
